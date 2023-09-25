@@ -1,0 +1,50 @@
+.spinner-loader__ {
+  transform-origin: center center;
+  animation: spin-animation-loader__ linear infinite 0.5s;
+}
+
+.spinner-loader__ > * {
+  transform-origin: center center;
+}
+
+.spinner-loader__ .s-1-loader__ {
+  transform: rotate(90deg);
+  animation: offset-1-loader__ cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite
+    alternate 0.5s;
+}
+
+.spinner-loader__ .s-3-loader__ {
+  transform: rotate(-90deg);
+  animation: offset-3-loader__ cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite
+    alternate 0.5s;
+}
+
+@keyframes offset-1-loader__ {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes offset-3-loader__ {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin-animation-loader__ {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
